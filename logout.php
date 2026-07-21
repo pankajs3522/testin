@@ -8,6 +8,9 @@ $_SESSION = array();
 // Destroy the session
 session_destroy();
 
+// Print a message
+echo "Logged out.";
+
 // Redirect to login page (adjust the URL as needed)
 header("Location: login.php");
 exit();
