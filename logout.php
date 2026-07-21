@@ -9,7 +9,7 @@ $_SESSION = array();
 session_destroy();
 
 // Print a message
-echo "Logged out.";
+echo "Ho gya ab ghr jao.";
 
 // Redirect to login page (adjust the URL as needed)
 header("Location: login.php");
