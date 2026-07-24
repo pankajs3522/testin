@@ -1,0 +1,19 @@
+var SendSurveyEmails = Class.create();
+SendSurveyEmails.prototype = {
+    initialize: function() {},
+
+    sendEmails: function(accountList) {
+        accountList.forEach(function(account) {
+            var email = new GlideEmailOutbound();
+            email.setSubject("We value your feedback");
+            email.setBody("Please take a moment to complete our survey: [LINK]");
+            email.setFrom("no-reply@yourcompany.com");
+            email.setTo(account.email);
+            email.send();
+        });
+        
+        gs.info("Survey emails sent to " + accountList.length + " accounts.");
+    },
+
+    type: 'SendSurveyEmails'
+};
